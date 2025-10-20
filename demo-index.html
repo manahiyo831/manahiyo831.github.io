@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebXR Demo Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            padding: 40px;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .demo-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .demo-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .demo-card h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+
+        .demo-card p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        .demo-card .tech-stack {
+            font-size: 0.85rem;
+            color: #ffeb3b;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #667eea;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WebXR Demo Portfolio</h1>
+        <p class="subtitle">Interactive 3D and Extended Reality Experiences</p>
+
+        <div class="demo-grid">
+            <div class="demo-card">
+                <h2>Unity WebXR</h2>
+                <p class="tech-stack">Unity • WebXR Export • AR/VR</p>
+                <p>Full-featured Unity WebGL build with WebXR support for immersive AR and VR experiences directly in the browser.</p>
+                <a href="index.html" class="btn">Launch Demo</a>
+            </div>
+
+            <div class="demo-card">
+                <h2>Three.js 3D Scene</h2>
+                <p class="tech-stack">Three.js • WebGL • Interactive</p>
+                <p>Lightweight 3D scene with interactive rotating cubes and dynamic lighting. Click and drag to explore!</p>
+                <a href="demos/threejs-demo.html" class="btn">Launch Demo</a>
+            </div>
+
+            <div class="demo-card">
+                <h2>WebXR AR Quick Demo</h2>
+                <p class="tech-stack">WebXR Device API • AR</p>
+                <p>Simple augmented reality demo using native WebXR API. Place virtual objects in your real environment.</p>
+                <a href="demos/webxr-ar-demo.html" class="btn">Launch Demo</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
